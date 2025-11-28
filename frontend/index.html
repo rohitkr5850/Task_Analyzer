@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Smart Task Analyzer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <h1>Smart Task Analyzer</h1>
+
+  <div class="container">
+
+    <h2>Add Task</h2>
+    <form id="taskForm">
+      <input type="text" id="title" placeholder="Title" required>
+      <input type="date" id="due_date">
+      <input type="number" id="estimated_hours" placeholder="Estimated Hours">
+      <input type="number" id="importance" placeholder="Importance 1-10">
+      <input type="text" id="dependencies" placeholder="Dependencies IDs (comma)">
+      <button type="submit">Add Task</button>
+    </form>
+
+    <h3>Or Paste JSON</h3>
+    <textarea id="bulkJson" placeholder="[ { task objects here } ]"></textarea>
+
+    <h3>Choose Strategy</h3>
+    <select id="strategy">
+      <option value="smart-balance">Smart Balance</option>
+      <option value="fastest-wins">Fastest Wins</option>
+      <option value="high-impact">High Impact</option>
+      <option value="deadline-driven">Deadline Driven</option>
+    </select>
+
+    <button id="analyzeBtn">Analyze Tasks</button>
+
+    <h2>Results</h2>
+    <div id="results"></div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
